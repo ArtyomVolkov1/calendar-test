@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from '../pages/Login';
 import Event from '../pages/Event';
+import { useRoutes } from 'react-router-dom';
 
 export interface IRoute {
     path: string,
@@ -12,10 +13,10 @@ export enum RouteNames {
     EVENT = '/'
 }
 
-export const publicRoutes: IRoute[] = [
+export const publicRoutes: IRoute[] =  [
     {path: RouteNames.LOGIN, element: <Login />}
 ]
 
-export const privateRoutes: IRoute[] = [
+export const privateRoutes: IRoute[] =  [
     {path: RouteNames.EVENT, element: <Event />}
 ]
